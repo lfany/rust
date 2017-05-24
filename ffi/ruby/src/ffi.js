@@ -8,11 +8,11 @@ var ffi = require('ffi');
 // os.platform()
 
 var lib
-if(process.platform == 'win32'){
+if(process.platform === 'win32'){
     lib = ffi.Library('target\\release\\ruby.dll', {
         'process': ['void', []]
     })
-}else if(process.platform == 'linux'){
+}else if(process.platform === 'linux'){
     lib = ffi.Library('target/release/libruby.so', {
         'process': ['void', []]
     })
