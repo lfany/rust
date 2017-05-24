@@ -25,3 +25,12 @@ maybe this mirror [https://npm.taobao.org/mirrors/python](https://npm.taobao.org
   cargo build --release
   python src/ffi.py
   ```
+
+## node
+
+- `$ npm install ffi`
+- ```$shell
+    cd rust/ffi/ruby
+    cargo build --release
+    node src/ffi.js
+    ```
