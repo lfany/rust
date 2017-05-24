@@ -75,6 +75,10 @@ fn main() {
     //    }
 
     loop {
-
+        let handle = thread::spawn(|| {
+            thread::sleep(Duration::from_millis(10000));
+            println!("thread {}!", thread::current().name().unwrap_or_default());
+        });
+        handle.join().unwrap();
     }
 }
