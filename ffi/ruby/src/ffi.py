@@ -14,8 +14,11 @@ if os_family == 'Windows':
     lib = cdll.LoadLibrary('target\\release\\ruby.dll')
 elif os_family == 'Linux':
     lib = cdll.LoadLibrary('target/release/libruby.so')
+elif os_family == 'Darwin':
+    lib = cdll.LoadLibrary('target/release/libruby.dylib')
 else:
     lib = cdll.LoadLibrary('target/release/libruby.so')
+
 
 lib.process()
 
