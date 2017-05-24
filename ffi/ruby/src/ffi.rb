@@ -2,12 +2,12 @@ require 'ffi'
 
 def os_family
   case RUBY_PLATFORM
+    when /linux/
+      :linux
     when /ix/i, /ux/i, /gnu/i,
         /sysv/i, /solaris/i,
         /sunos/i, /bsd/i
       :unix
-    when /linux/
-      :linux
     when /win/i, /ming/i
       :windows
     when /darwin|mac os/
