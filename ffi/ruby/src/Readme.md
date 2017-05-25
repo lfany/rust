@@ -28,7 +28,8 @@ maybe this mirror [https://npm.taobao.org/mirrors/python](https://npm.taobao.org
 
 ## node
 
-- `$ npm install ffi`
+- `$ npm install ffi -g`
+- `$ npm link ffi`
 - ```$shell
     cd rust/ffi/ruby
     cargo build --release
