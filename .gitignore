@@ -146,4 +146,3 @@ typings/
 *.dll
 *.so
 *.dylib
-ffi
