@@ -2,7 +2,7 @@ package main
 
 /*
 //#cgo CFLAGS: -I.
-#cgo LDFLAGS: ${SRCDIR}/../target/release/ruby.dll
+#cgo LDFLAGS: ${SRCDIR}/../target/release/libruby.so
 //#include <stdio.h>
 void process();
 */
