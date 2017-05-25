@@ -140,3 +140,9 @@ typings/
 
 
 # End of https://www.gitignore.io/api/node
+
+## My
+*.exe
+*.dll
+*.so
+*.dylib
