@@ -9,7 +9,7 @@ ifeq ($(shell uname -s),Linux)
 	@cp ../target/release/libruby_process.so .
 	$(GOBIN) build -x -v ffi.go
 	@chmod a+x ./ffi
-	@./ffi
+	@LD_LIBRARY_PATH=. ./ffi
 else ifeq ($(shell uname -o),Msys)
 	@cp ../target/release/ruby_process.dll .
 	$(GOBIN) build -x -v ffi.go
@@ -18,7 +18,7 @@ else
 	@cp ../target/release/libruby_process.dylib .
 	$(GOBIN) build -x -v ffi.go
 	@chmod a+x ./src
-	@./ffi
+	@LD_LIBRARY_PATH=. ./ffi
 endif
 
 clean:
