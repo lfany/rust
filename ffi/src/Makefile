@@ -22,8 +22,10 @@ else
 endif
 	## exec python ffi.py
 	python ffi.py
-	## exec ruby
+	## exec ruby should install ffi with  gem install ffi
 	ruby ffi.rb
+	## exec nodejs ffi with ffi module  npm install -g ffi && npm link ffi
+	node ffi.js
 
 
 clean:

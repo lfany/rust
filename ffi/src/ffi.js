@@ -8,6 +8,7 @@ var ffi = require('ffi');
 // os.platform()
 
 var lib
+process.chdir('..')
 if(process.platform === 'win32'){
     lib = ffi.Library('target\\release\\ruby_process.dll', {
         'process': ['void', []]
