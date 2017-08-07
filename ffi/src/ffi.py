@@ -11,13 +11,13 @@ if os.getcwd().endswith('src'):
     print(os.getcwd())
 
 if os_family == 'Windows':
-    lib = cdll.LoadLibrary('target\\release\\ruby.dll')
+    lib = cdll.LoadLibrary('target\\release\\ruby_process.dll')
 elif os_family == 'Linux':
-    lib = cdll.LoadLibrary('target/release/libruby.so')
+    lib = cdll.LoadLibrary('target/release/libruby_process.so')
 elif os_family == 'Darwin':
-    lib = cdll.LoadLibrary('target/release/libruby.dylib')
+    lib = cdll.LoadLibrary('target/release/libruby_process.dylib')
 else:
-    lib = cdll.LoadLibrary('target/release/libruby.so')
+    lib = cdll.LoadLibrary('target/release/libruby_process.so')
 
 
 lib.process()
