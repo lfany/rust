@@ -20,6 +20,11 @@ else
 	@chmod a+x ./src
 	@LD_LIBRARY_PATH=. ./ffi
 endif
+	## exec python ffi.py
+	python ffi.py
+	## exec ruby
+	ruby ffi.rb
+
 
 clean:
 	rm -rf ruby_process.dll libruby_process.so libruby_process.dylib ffi ffi.exe

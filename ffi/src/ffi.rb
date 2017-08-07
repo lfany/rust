@@ -17,11 +17,13 @@ def os_family
   end
 end
 
+Dir.chdir('..')
+
 module Hello
   extend FFI::Library
-  ffi_lib os_family == :windows ? 'target/release/ruby.dll' : os_family == :linux || os_family == :unix ?
-      'target/release/libruby.so' : os_family == :macosx ?
-      'target/release/libruby.dylib' : 'target/release/libruby.so'
+  ffi_lib os_family == :windows ? 'target/release/ruby_process.dll' : os_family == :linux || os_family == :unix ?
+      'target/release/libruby_process.so' : os_family == :macosx ?
+      'target/release/libruby_process.dylib' : 'target/release/libruby_process.so'
   attach_function :process, [], :void
 end
 
