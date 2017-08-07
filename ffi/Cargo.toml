@@ -1,10 +1,10 @@
 [package]
-name = "ruby"
+name = "ruby_process"
 version = "0.1.0"
 authors = ["hello <hello@ifnot.cc>"]
 
 [lib]
-name = "ruby"
+name = "ruby_process"
 crate-type = ["dylib"]
 
 [dependencies]

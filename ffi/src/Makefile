@@ -5,19 +5,21 @@ all:
 	@pwd
 	@env
 	@cd .. &&cargo build --release
+ifeq ($(shell uname -s),Linux)
+	@cp ../target/release/libruby_process.so .
 	$(GOBIN) build -x -v ffi.go
-	ifeq ($(shell uname -s), Linux)
-	@cp../target/release/libruby.so.
-	@chmoda + x./src
-	@./src
-	else ifeq ($(shell uname -o), Msys)
-	@cp ../target/release/ruby.dll .
-	@./src.exe
-	else
-	@cp ../target/release/libruby.dylib .
+	@chmod a+x ./ffi
+	@./ffi
+else ifeq ($(shell uname -o),Msys)
+	@cp ../target/release/ruby_process.dll .
+	$(GOBIN) build -x -v ffi.go
+	@./ffi.exe
+else
+	@cp ../target/release/libruby_process.dylib .
+	$(GOBIN) build -x -v ffi.go
 	@chmod a+x ./src
-	@./src
-	endif
+	@./ffi
+endif
 
 clean:
-	rm-rfruby.dlllibruby.solibruby.dylibsrcsrc.exe
+	rm -rf ruby_process.dll libruby_process.so libruby_process.dylib ffi ffi.exe
