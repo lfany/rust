@@ -9,15 +9,15 @@ var ffi = require('ffi');
 
 var lib
 if(process.platform === 'win32'){
-    lib = ffi.Library('target\\release\\ruby.dll', {
+    lib = ffi.Library('target\\release\\ruby_process.dll', {
         'process': ['void', []]
     })
 }else if(process.platform === 'linux'){
-    lib = ffi.Library('target/release/libruby.so', {
+    lib = ffi.Library('target/release/libruby_process.so', {
         'process': ['void', []]
     })
 }else{
-    lib = ffi.Library('target/release/libruby.so', {
+    lib = ffi.Library('target/release/libruby_process.so', {
         'process': ['void', []]
     })
 }
