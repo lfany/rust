@@ -147,3 +147,6 @@ typings/
 *.so
 *.dylib
 ffi*
+
+.idea
+sentry/*.lock
