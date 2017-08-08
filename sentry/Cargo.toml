@@ -1,0 +1,6 @@
+[package]
+name = "sentry"
+version = "0.1.0"
+authors = ["hello <hello@ifnot.cc>"]
+
+[dependencies]
